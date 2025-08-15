@@ -49,6 +49,7 @@ from models.common import (
     GhostConv,
     Proto,
 )
+from models.cbam import CBAM
 from models.experimental import MixConv2d
 from utils.autoanchor import check_anchor_order
 from utils.general import LOGGER, check_version, check_yaml, colorstr, make_divisible, print_args
@@ -404,6 +405,7 @@ def parse_model(d, ch):
         if m in {
             Conv,
             GhostConv,
+            CBAM,
             Bottleneck,
             GhostBottleneck,
             SPP,
